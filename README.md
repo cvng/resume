@@ -4,17 +4,10 @@
 
 ---
 
-## References
-
-- Mouad Chaouki - Tech Lead (SysPay)
-- Gautier Boudeweel - Engineering Manager (PrestaShop)
-
----
-
 ## Education
 
 | | |
-|---|---|
+| --- | --- |
 | **2014** | EPSI – BTS Services informatiques aux organisations (Programmation) |
 | **2015** | WIS – Bachelor Chef de Projet Digital (Management de projet) |
 
@@ -22,34 +15,44 @@
 
 ## Technical Skills
 
-**Core skills**
+### Core skills
+
 - Rust, TypeScript, PostgreSQL, Node.js, GraphQL, Performance Engineering
 
-**Performance & optimization**
+### Performance & optimization
+
 - Profiling CPU/RAM/I/O, optimisation de requêtes SQL, indexation PostgreSQL, tests de charge (k6), isolation du hot path / jobs asynchrones
 
-**Backend development**
+### Backend development
+
 - TypeScript, Node.js, Bun, Rust, Python, Django, Hono, Apollo Server, graphql-yoga
 
-**APIs & event-driven architectures**
+### APIs & event-driven architectures
+
 - GraphQL (fédération, BFF, graphql-codegen, graphql-inspector), REST, gRPC, OpenAPI/Swagger, event-driven (CDC, CQRS, webhooks), Hasura, Kafka, AWS SNS
 
-**Frontend development**
+### Frontend development
+
 - Vue.js, React, TypeScript
 
-**Databases**
+### Databases
+
 - PostgreSQL (CDC, RDS Proxy, indexation), MongoDB
 
-**Cloud**
+### Cloud
+
 - AWS (Lambda, RDS, KMS, VPC, IAM, SNS, S3, Amplify), GCP (Cloud Run), Heroku, Vercel
 
-**Infrastructure & CI/CD**
+### Infrastructure & CI/CD
+
 - Terraform, Docker, GitLab CI, GitHub Actions, Bash, ARGC, OXC, Squawk
 
-**Compliance & security**
+### Compliance & security
+
 - PCI-DSS, RGPD, HL7
 
-**Tools & methodologies**
+### Tools & methodologies
+
 - Git, GitLab, GitHub, Bitbucket, Jira, Slack, Segment, Scrum, ADR
 
 ---
@@ -57,7 +60,7 @@
 ## Languages
 
 | | |
-|---|---|
+| --- | --- |
 | **Anglais** | Professionnel complet |
 | **Français** | Langue maternelle |
 
@@ -66,11 +69,12 @@
 ## Professional Experience
 
 ### Février 2024 – Novembre 2025 — SysPay – Settleflow
-**Senior Software Engineer · Architecte Cloud (DevOps)**
+
+#### Senior Software Engineer · Architecte Cloud (DevOps)
 
 Settleflow est un processeur de paiement de type Stripe traitant plusieurs millions de requêtes de paiement par jour dans la zone européenne, avec une couche de réconciliation exécutée en arrière-plan.
 
-**Key projects**
+#### Key projects
 
 Conception de l'architecture event-driven et de l'infrastructure cloud du processeur de paiement, au sein d'une équipe de 5 développeurs :
 
@@ -79,7 +83,7 @@ Conception de l'architecture event-driven et de l'infrastructure cloud du proces
 - Infrastructure construite intégralement avec des modules Terraform et des services AWS conformes PCI-DSS (KMS, RDS chiffré, RDS Proxy, VPC segmenté, Lambda, security groups, IAM)
 - API publique de type Stripe, avec traitement de réconciliation exécuté en arrière-plan
 
-**Achievements**
+#### Achievements
 
 Pilotage de la performance par les choix d'architecture et d'infrastructure :
 
@@ -99,11 +103,12 @@ Pilotage de la performance par les choix d'architecture et d'infrastructure :
 ---
 
 ### Juin 2022 – Juin 2023 — PrestaShop
-**Senior Software Engineer · Tech Lead**
+
+#### Senior Software Engineer · Tech Lead
 
 PrestaShop est la plateforme e-commerce open-source permettant de créer et gérer des boutiques en ligne ; le projet visait à en construire la version SaaS (onboarding.prestashop.com).
 
-**Key projects**
+#### Key projects
 
 Pilotage de la squad « onboarding » (5 développeurs) et construction de la version SaaS de PrestaShop, en collaboration avec les squads « core », « accounts », « billing » et « hosting » :
 
@@ -111,7 +116,7 @@ Pilotage de la squad « onboarding » (5 développeurs) et construction de la ve
 - Génération d'un client GraphQL type-safe à partir du schéma, produisant des hooks Vue typés
 - Pipeline GitHub Actions exécutant GraphQL Inspector (graphql-inspector) pour détecter les bugs de schéma, breaking changes et régressions, ainsi que les tests, puis publiant une image Docker sur GCP Cloud Run
 
-**Achievements**
+#### Achievements
 
 Reprise et aboutissement d'un projet ayant échoué à trois reprises avant la squad, avec une équipe réduite mais à fort impact dans l'entreprise :
 
@@ -127,11 +132,12 @@ Reprise et aboutissement d'un projet ayant échoué à trois reprises avant la s
 ---
 
 ### Mars 2022 – Juin 2022 — elba
-**Senior Software Engineer**
+
+#### Senior Software Engineer
 
 elba est un hub de cybersécurité tout-en-un destiné à sécuriser les équipes dans leur travail quotidien.
 
-**Key projects**
+#### Key projects
 
 Intégré à une équipe de 5 développeurs travaillant directement avec le CTO, en charge du développement d'une fonctionnalité autonome, le module « Training » :
 
@@ -139,7 +145,7 @@ Intégré à une équipe de 5 développeurs travaillant directement avec le CTO,
 - Bascule de l'application vers une approche event-driven en exploitant les fonctionnalités avancées de Hasura (event triggers)
 - Intégration Segment facilitée par cette approche, chaque action devenant nativement un événement
 
-**Achievements**
+#### Achievements
 
 - Mise en place des évolutions de la configuration Hasura pour la rendre event-driven
 - Livraison du module « Training » de bout en bout : évolutions de l'API Hasura et création des pages front-end en React, en s'appuyant sur le design-system interne
@@ -150,17 +156,18 @@ Intégré à une équipe de 5 développeurs travaillant directement avec le CTO,
 ---
 
 ### Décembre 2021 – Février 2022 — Theodo FinTech
-**Senior Software Engineer**
+
+#### Senior Software Engineer
 
 Theodo FinTech développe des applications digitales innovantes pour le secteur de la finance.
 
-**Key projects**
+#### Key projects
 
 Intégré à une équipe de 3 développeurs, contribution à des outils d'administration internes (portail de gestion des employés) :
 
 - Développement d'une page de gestion du profil employé au sein du portail interne
 
-**Achievements**
+#### Achievements
 
 - Extension de l'API GraphQL pour couvrir les nouveaux besoins
 - Mise en place d'un client GraphQL auto-généré via graphql-codegen
@@ -172,11 +179,12 @@ Intégré à une équipe de 3 développeurs, contribution à des outils d'admini
 ---
 
 ### Novembre 2020 – Avril 2021 — PromTime
-**Senior Software Engineer**
+
+#### Senior Software Engineer
 
 PromTime est une société de data science qui compare en temps réel les gains de santé des patients.
 
-**Key projects**
+#### Key projects
 
 Intégré à une équipe de 3 développeurs travaillant directement avec le CTO, sélectionné pour mon expertise GraphQL afin de bâtir une API d'ingestion de données à fort volume (PROMs) :
 
@@ -184,7 +192,7 @@ Intégré à une équipe de 3 développeurs travaillant directement avec le CTO,
 - Construction de l'API GraphQL d'ingestion (Apollo Server) avec playground interactif pour collecter les données auprès des partenaires
 - Conception du serveur GraphQL dans le respect des exigences RGPD et de la norme HL7
 
-**Achievements**
+#### Achievements
 
 - Livraison d'une API GraphQL conséquente, fidèle à la spécification PROM, avec playground interactif et bonnes pratiques RGPD + HL7
 - Rédaction d'une documentation détaillée pour les partenaires : la spécification PROM étant complexe, l'exactitude du mapping des champs est capitale pour les opérations de l'entreprise
@@ -195,11 +203,12 @@ Intégré à une équipe de 3 développeurs travaillant directement avec le CTO,
 ---
 
 ### Janvier 2017 – Octobre 2020 — Freelance – missions diverses
-**Software Engineer · Tech Lead**
+
+#### Software Engineer · Tech Lead
 
 Missions freelance en régie, embarqué dans les équipes clients, auprès de startups, scale-ups et grands comptes des secteurs fintech, immobilier, mobilité et e-commerce (développement full-stack et mobile).
 
-**Key projects**
+#### Key projects
 
 Interventions en tant que développeur et tech lead sur des missions variées :
 
@@ -207,7 +216,7 @@ Interventions en tant que développeur et tech lead sur des missions variées :
 - **Piteo (Tech Lead)** : pilotage de l'architecture d'une API GraphQL permettant aux bailleurs de gérer leur portefeuille immobilier
 - **LSF Énergie** : développement d'un scraper Python intégrant l'OCR Google Vision pour automatiser le travail des employés
 
-**Achievements**
+#### Achievements
 
 Responsabilités d'architecture applicative et d'infrastructure :
 
@@ -222,21 +231,32 @@ Responsabilités d'architecture applicative et d'infrastructure :
 ---
 
 ### Octobre 2014 – Décembre 2016 — jestocke.com
-**Software Engineer · Tech Lead**
+
+#### Software Engineer · Tech Lead
 
 jestocke.com est une marketplace en ligne de location d'espaces de stockage inutilisés entre particuliers.
 
-**Key projects**
+#### Key projects
 
 Construction des composants critiques de la marketplace, au sein d'une équipe de 5 développeurs :
 
 - Moteur de recherche des annonces pour les utilisateurs (Algolia)
 - Système de réservation et de paiement entre particuliers (MangoPay)
 
-**Achievements**
+#### Achievements
 
 - Responsable de la gestion et du monitoring de l'infrastructure de production (Heroku)
 - Participation à la structuration de l'équipe technique, passée de 2 à 5 développeurs, et recrutement de nouveaux membres
 - Accompagnement de la startup dans sa croissance, de 3 à plus de 10 employés, jusqu'à sa deuxième levée de fonds
 
 **Tech stack:** Python, Django, PostgreSQL, Heroku, MangoPay, Algolia
+
+---
+
+## References
+
+- Mouad Chaouki - Tech Lead (SysPay)
+- Gautier Boudeweel - Engineering Manager (PrestaShop)
+- Antoine Berton - CTO (elba)
+- Alexandre Blondin - Tech Lead (Theodo FinTech)
+- Loic Calvy - CTO (PromTime)
