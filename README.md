@@ -227,8 +227,6 @@ jestocke.com is a peer-to-peer online marketplace for renting unused storage spa
 ## Open Source
 
 - [supabase-community/postgres-language-server](https://github.com/supabase-community/postgres-language-server) — A Language Server for PostgreSQL. Top #2 contributor.
-- [pg_print](https://github.com/cvng/pg_print) — A PostgreSQL pretty-printer built in Rust.
-- [jrsx](https://github.com/cvng/jrsx) — JSX-like templates for Rust.
 
 ---
 
