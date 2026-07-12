@@ -45,7 +45,7 @@ Paris, France | <vangout.cedric@gmail.com> | [Calendly](https://calendly.com/cvn
 
 Short backend engagements and AI-adoption consulting for startups.
 
-#### Key projects
+#### Approach
 
 - Claude Code / Cowork setup in IDE and GitHub CI for automated code reviews
 - Short-term backend development (Node.js, TypeScript, PostgreSQL)
@@ -60,7 +60,9 @@ Short backend engagements and AI-adoption consulting for startups.
 
 Settleflow is a Stripe-like payment processor handling millions of payment requests per day across Europe, with a reconciliation layer running in the background.
 
-#### Key projects
+**Challenge:** Serve very high payment traffic under 15 ms latency, on a serverless stack, under PCI-DSS constraints.
+
+#### Approach
 
 Designed the event-driven architecture and cloud infrastructure for the payment processor, within a team of 5 engineers:
 
@@ -68,20 +70,18 @@ Designed the event-driven architecture and cloud infrastructure for the payment 
 - Webhook delivery to partners and billing/analytics metrics fed from the payment event stream
 - Infrastructure built entirely with Terraform modules and PCI-DSS-compliant AWS services (KMS, encrypted RDS, RDS Proxy, segmented VPC, Lambda, security groups, IAM)
 - Stripe-like public API with background reconciliation processing
-
-#### Achievements
-
-Performance-driven architecture and infrastructure decisions:
-
-- Served up to 100,000 payment requests per minute under 15 ms, with 900 concurrent Lambdas and an RDS Proxy pool fronting a scaled RDS instance
-- ~50x throughput improvement by choosing auto-scaling Lambdas over EC2 instances
-- Reduced SQL queries per application request from 150+ to under 15 through dedicated PostgreSQL indexes
 - Met performance targets by moving non-critical SQL queries off the hot path into background jobs
 - Continuous PostgreSQL optimization: enabling and resolving slow query logs, monitoring CPU load (cache) and max connections (Lambda concurrency)
 - Built a CI/CD automation CLI (ARGC, Rust) deeply integrated with GitLab CI, deploying each MR to an ephemeral environment with a seeded database in under one minute
 - Git tag-triggered production deployments with automatic CHANGELOG updates (release notes extracted from commits)
 - Pipeline linter integration: OXC (TypeScript) and Squawk (detecting dangerous or slow PostgreSQL migrations in production)
 - Load regression tests (k6) run on every MR and release
+
+#### Results
+
+- Served up to 100,000 payment requests per minute under 15 ms, with 900 concurrent Lambdas and an RDS Proxy pool fronting a scaled RDS instance
+- ~50x throughput improvement by choosing auto-scaling Lambdas over EC2 instances
+- Reduced SQL queries per application request from 150+ to under 15 through dedicated PostgreSQL indexes
 - Seeded ephemeral environments adopted by all contributors, accelerating iteration and regression review
 
 **Tech stack:** TypeScript, Bun, Hono, OpenAPI, Swagger Codegen, Rust, ARGC, OXC, Squawk, PostgreSQL (CDC, aws_lambda extension, RDS Proxy), AWS (Lambda, encrypted RDS, KMS, VPC, security groups, IAM, SNS), Terraform, Bash, k6, GitLab CI/CD, PCI-DSS
@@ -94,24 +94,25 @@ Performance-driven architecture and infrastructure decisions:
 
 PrestaShop is the open-source e-commerce platform for creating and managing online stores; the project aimed to build its SaaS version (onboarding.prestashop.com).
 
-#### Key projects
+**Challenge:** Ship the SaaS version of PrestaShop after three failed attempts, coordinating four squads with conflicting priorities.
+
+#### Approach
 
 Led the "onboarding" squad (5 engineers) and built the SaaS version of PrestaShop, collaborating with the "core", "accounts", "billing", and "hosting" squads:
 
 - Designed and implemented a GraphQL gateway (graphql-yoga, graphql-codegen) federating 4 internal micro-services (onboarding, accounts, billing, hosting) under a unified BFF for the Vue frontend
 - Generated a type-safe GraphQL client from the schema, producing typed Vue hooks
 - GitHub Actions pipeline running GraphQL Inspector (graphql-inspector) to detect schema bugs, breaking changes, and regressions, plus tests, then publishing a Docker image to GCP Cloud Run
-
-#### Achievements
-
-Shipped — ahead of schedule — a project that had failed three times before, onboarding 100+ merchants:
-
 - Proposed the initial architecture for onboarding.prestashop.com, jointly with the engineering manager
 - Wrote architecture decision records (ADR) and mentored junior developers in the squad
 - Led architecture meetings with tech leads from other squads to present the target architecture and arbitrate integration points and workflow dependencies
 - Contributed to PrestaShop's open-source codebase to add generic extension points tailored to our needs
 - Reverse-engineered and contributed (MRs) to other squads' codebases to meet deadlines and shared objectives
-- Helped other squads learn and adopt GraphQL in their codebases
+
+#### Results
+
+- Shipped ahead of schedule, onboarding 100+ merchants
+- GraphQL approach adopted by other squads in their codebases
 
 **Tech stack:** TypeScript, Node.js, GraphQL (graphql-yoga, graphql-codegen, graphql-inspector, federation, BFF), Vue.js, GCP (Cloud Run), Docker, GitHub Actions
 
@@ -123,16 +124,13 @@ Shipped — ahead of schedule — a project that had failed three times before, 
 
 elba is an all-in-one cybersecurity hub designed to secure teams in their daily work.
 
-#### Key projects
+#### Approach
 
 Embedded in a team of 5 engineers working directly with the CTO, responsible for developing a standalone feature, the "Training" module:
 
 - "Training" module: 50+ step form assessing users' security knowledge, serving 1,000+ users, consuming the Hasura GraphQL API and persisting progress incrementally
 - Migrated the application to an event-driven approach leveraging Hasura's advanced features (event triggers)
 - Segment integration made seamless by this approach, with every action natively becoming an event
-
-#### Achievements
-
 - Evolved the Hasura configuration to make it event-driven
 - Delivered the "Training" module end-to-end: Hasura API changes and React front-end pages built on the internal design system
 - Built a Segment connector (Hasura event listener) forwarding relevant events to Segment
@@ -147,14 +145,11 @@ Embedded in a team of 5 engineers working directly with the CTO, responsible for
 
 Theodo FinTech builds innovative digital applications for the finance sector.
 
-#### Key projects
+#### Approach
 
 Embedded in a team of 3 engineers, contributing to internal administration tools (employee management portal):
 
 - Developed an employee profile management page within the internal portal
-
-#### Achievements
-
 - Extended the GraphQL API to cover new requirements
 - Set up an auto-generated GraphQL client via graphql-codegen
 - Added pages and components to the React codebase
@@ -170,19 +165,21 @@ Embedded in a team of 3 engineers, contributing to internal administration tools
 
 PromTime is a data science company that compares patient health outcomes in real time.
 
-#### Key projects
+**Challenge:** Ingest high-volume patient health data following the complex PROM specification, under GDPR and HL7 constraints.
+
+#### Approach
 
 Embedded in a team of 3 engineers working directly with the CTO, selected for my GraphQL expertise to build a high-volume data ingestion API (PROMs):
 
 - Studied the PROM specification to propose a pragmatic GraphQL schema (300+ fields) bridging fixed and dynamic data
-- Built the GraphQL ingestion API (Apollo Server) with an interactive playground, collecting data from 20 partners (~2,000 patient records/day)
+- Built the GraphQL ingestion API (Apollo Server) with an interactive playground
 - Designed the GraphQL server in compliance with GDPR requirements and the HL7 standard
-
-#### Achievements
-
-- Delivered a comprehensive GraphQL API faithful to the PROM specification, with interactive playground and GDPR + HL7 best practices
 - Wrote detailed documentation for partners: the PROM specification being complex, accurate field mapping is critical for business operations
-- No blocking issues raised during the security audit conducted at the end of the engagement
+
+#### Results
+
+- 20 partners connected, collecting ~2,000 patient records/day
+- Security audit passed with no blocking findings
 
 **Tech stack:** TypeScript, Node.js, GraphQL, Apollo Server, PostgreSQL, GCP, Bitbucket, GDPR, HL7
 
@@ -194,7 +191,7 @@ Embedded in a team of 3 engineers working directly with the CTO, selected for my
 
 Freelance engagements embedded in client teams, working with startups, scale-ups, and large enterprises in fintech, real estate, mobility, and e-commerce (full-stack and mobile development).
 
-#### Key projects
+#### Approach
 
 Worked as a developer and tech lead across multiple engagements:
 
@@ -212,18 +209,19 @@ Worked as a developer and tech lead across multiple engagements:
 
 jestocke.com is a peer-to-peer online marketplace for renting unused storage spaces.
 
-#### Key projects
+**Challenge:** Build the critical components of a growing marketplace with a two-person engineering team.
 
-Built critical marketplace components within a team of 5 engineers:
+#### Approach
 
-- Listing search engine indexing 20K+ listings (Algolia)
-- Peer-to-peer booking and payment system handling 100K+ transactions (MangoPay)
-
-#### Achievements
-
+- Built the listing search engine (Algolia) and peer-to-peer booking and payment system (MangoPay)
 - Managed and monitored the production infrastructure (Heroku)
-- Helped structure the engineering team from 2 to 5 developers, and recruited new members
-- Supported the startup's growth from 3 to 10+ employees through its second funding round (€2M)
+- Helped structure the engineering team and recruited new members
+
+#### Results
+
+- 20K+ listings indexed, 100K+ transactions processed
+- Engineering team grown from 2 to 5 developers
+- Startup grown from 3 to 10+ employees through its second funding round (€2M)
 
 **Tech stack:** Python, Django, PostgreSQL, Heroku, MangoPay, Algolia
 
