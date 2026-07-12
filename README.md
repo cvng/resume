@@ -1,4 +1,3 @@
-
 # Cedric VANGOUT
 
 **Senior Backend Engineer**
@@ -262,5 +261,5 @@ Built critical marketplace components within a team of 5 engineers:
 - [Gautier Boudeweel](https://www.linkedin.com/in/gautier-boudeweel) - Engineering Manager (PrestaShop)
 - [Antoine Berton](https://www.linkedin.com/in/antoine-berton-532519225) - CTO (elba)
 - [Alexandre Blondin](https://www.linkedin.com/in/alexandre-blondin-295b44a8) - Tech Lead (Theodo FinTech)
-- [Loic Calvy](https://www.linkedin.com/in/loïc-calvy) - CTO (PromTime)
+- [Loic Calvy](https://www.linkedin.com/in/lo%C3%AFc-calvy) - CTO (PromTime)
 - [Laure Courty](https://www.linkedin.com/in/laure-courty-09406678) - CEO (jestocke.com)
