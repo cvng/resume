@@ -2,7 +2,7 @@
 
 **Senior Backend Engineer**
 
-Paris, France | <vangout.cedric@gmail.com> | +33633843340 | <https://linkedin.com/in/cedricvangout>
+Paris, France | <vangout.cedric@gmail.com> | +33633843340 | in/cedricvangout
 
 ---
 
@@ -47,7 +47,7 @@ Paris, France | <vangout.cedric@gmail.com> | +33633843340 | <https://linkedin.co
 
 ### Infrastructure & CI/CD
 
-- Terraform, Docker, GitLab CI, GitHub Actions, Bash, ARGC, OXC, Squawk
+- Terraform, Docker, GitLab CI, GitHub Actions, Bash, ARGC, OXC, Squawk, graphql-inspector
 
 ### Compliance & security
 
