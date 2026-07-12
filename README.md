@@ -205,6 +205,12 @@ Built critical marketplace components within a team of 5 engineers:
 
 ---
 
+## Open Source
+
+- [supabase-community/postgres-language-server](https://github.com/supabase-community/postgres-language-server) — A Language Server for PostgreSQL. Top #2 contributor.
+
+---
+
 ## Languages
 
 | | |
@@ -220,12 +226,6 @@ Built critical marketplace components within a team of 5 engineers:
 | --- | --- |
 | **2014** | EPSI – BTS Services informatiques aux organisations (Programmation) |
 | **2015** | WIS – Bachelor Chef de Projet Digital (Management de projet) |
-
----
-
-## Open Source
-
-- [supabase-community/postgres-language-server](https://github.com/supabase-community/postgres-language-server) — A Language Server for PostgreSQL. Top #2 contributor.
 
 ---
 
