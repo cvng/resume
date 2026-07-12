@@ -8,6 +8,15 @@ Paris, France | <vangout.cedric@gmail.com> | [Calendly](https://calendly.com/cvn
 
 ---
 
+## Highlights
+
+- 50x throughput on a EU payment processor — 100K req/min under 15 ms (SysPay)
+- Shipped PrestaShop's SaaS platform after 3 failed attempts, onboarding 100+ merchants
+- GDPR + HL7 compliant health-data API — passed security audit with zero blocking findings (PromTime)
+- Top #2 contributor to supabase-community/postgres-language-server
+
+---
+
 ## Skills
 
 ### Core
@@ -30,6 +39,21 @@ Paris, France | <vangout.cedric@gmail.com> | [Calendly](https://calendly.com/cvn
 ---
 
 ## Experience
+
+### February 2026 – Present — Freelance – Short-term engagements
+
+#### Senior Backend Engineer · AI Enablement
+
+Short backend engagements and AI-adoption consulting for startups.
+
+#### Key projects
+
+- Claude Code / Cowork setup in IDE and GitHub CI for automated code reviews
+- Short-term backend development (Node.js, TypeScript, PostgreSQL)
+
+**Tech stack:** Node.js, TypeScript, PostgreSQL, Claude Code, GitHub Actions
+
+---
 
 ### February 2024 – November 2025 — SysPay – Settleflow
 
@@ -81,7 +105,7 @@ Led the "onboarding" squad (5 engineers) and built the SaaS version of PrestaSho
 
 #### Achievements
 
-Took over and delivered ahead of schedule a project that had failed three times before, onboarding 100+ merchants with a small but high-impact team:
+Shipped — ahead of schedule — a project that had failed three times before, onboarding 100+ merchants:
 
 - Proposed the initial architecture for onboarding.prestashop.com, jointly with the engineering manager
 - Wrote architecture decision records (ADR) and mentored junior developers in the squad
@@ -209,6 +233,8 @@ Built critical marketplace components within a team of 5 engineers:
 ## Open Source
 
 - [supabase-community/postgres-language-server](https://github.com/supabase-community/postgres-language-server) — A Language Server for PostgreSQL. Top #2 contributor.
+- [pg_print](https://github.com/cvng/pg_print) — A PostgreSQL pretty-printer built in Rust.
+- [jrsx](https://github.com/cvng/jrsx) — JSX-like templates for Rust.
 
 ---
 
