@@ -11,7 +11,7 @@ Paris, France | <vangout.cedric@gmail.com> | [Calendly](https://calendly.com/cvn
 
 - 50x throughput on a EU payment processor — 100K req/min under 15 ms (SysPay)
 - Shipped PrestaShop's SaaS platform after 3 failed attempts, onboarding 100+ merchants
-- GDPR + HL7 compliant health-data API — passed security audit with zero findings (PromTime)
+- GDPR + HL7 health-data API — security audit: zero blocking findings (PromTime)
 - Top #2 contributor to supabase-community/postgres-language-server
 
 ---
