@@ -11,7 +11,7 @@ Paris, France | <vangout.cedric@gmail.com> | [Calendly](https://calendly.com/cvn
 
 - 50x throughput on a EU payment processor — 100K req/min under 15 ms (SysPay)
 - Shipped PrestaShop's SaaS platform after 3 failed attempts, onboarding 100+ merchants
-- GDPR + HL7 compliant health-data API — passed security audit with zero blocking findings (PromTime)
+- GDPR + HL7 compliant health-data API — passed security audit with zero findings (PromTime)
 - Top #2 contributor to supabase-community/postgres-language-server
 
 ---
@@ -58,7 +58,7 @@ Short backend engagements and AI-adoption consulting for startups.
 
 #### Senior Backend Engineer · Cloud Architect (DevOps)
 
-Settleflow is a Stripe-like payment processor handling millions of payment requests per day across Europe, with a reconciliation layer running in the background.
+Settleflow is a Stripe-like payment processor handling millions of payment requests per day across Europe, with a reconciliation layer running in the background ([settleflow.io](https://settleflow.io)).
 
 **Challenge:** Serve very high payment traffic under 15 ms latency, on a serverless stack, under PCI-DSS constraints.
 
@@ -92,7 +92,7 @@ Designed the event-driven architecture and cloud infrastructure for the payment 
 
 #### Senior Backend Engineer · Tech Lead
 
-PrestaShop is the open-source e-commerce platform for creating and managing online stores; the project aimed to build its SaaS version (onboarding.prestashop.com).
+PrestaShop is the open-source e-commerce platform for creating and managing online stores; the project aimed to build its SaaS version ([onboarding.prestashop.com](https://onboarding.prestashop.com)).
 
 **Challenge:** Ship the SaaS version of PrestaShop after three failed attempts, coordinating four squads with conflicting priorities.
 
@@ -122,7 +122,7 @@ Led the "onboarding" squad (5 engineers) and built the SaaS version of PrestaSho
 
 #### Senior Backend Engineer
 
-elba is an all-in-one cybersecurity hub designed to secure teams in their daily work.
+elba is an all-in-one cybersecurity hub designed to secure teams in their daily work ([elba.security](https://elba.security)).
 
 #### Approach
 
@@ -160,7 +160,7 @@ Embedded in a team of 3 engineers, contributing to internal administration tools
 
 #### Senior Backend Engineer
 
-PromTime is a data science company that compares patient health outcomes in real time.
+PromTime is a data science company that compares patient health outcomes in real time ([promtime.org](https://promtime.org)).
 
 **Challenge:** Ingest high-volume patient health data following the complex PROM specification, under GDPR and HL7 constraints.
 
@@ -204,7 +204,7 @@ Worked as a developer and tech lead across multiple engagements:
 
 #### Backend Engineer · Tech Lead
 
-jestocke.com is a peer-to-peer online marketplace for renting unused storage spaces.
+jestocke.com is a peer-to-peer online marketplace for renting unused storage spaces ([jestocke.com](https://jestocke.com)).
 
 **Challenge:** Build the critical components of a growing marketplace with a two-person engineering team.
 
