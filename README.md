@@ -1,6 +1,8 @@
 # Cedric VANGOUT
 
-**Senior Backend Engineer** · France
+**Senior Backend Engineer**
+
+Paris, France | <vangout.cedric@gmail.com> | +33633843340 | <https://linkedin.com/in/cedricvangout>
 
 ---
 
@@ -13,27 +15,27 @@
 
 ---
 
-## Technical Skills
+## Skills
 
-### Core skills
+### Top skills
 
-- Rust, TypeScript, PostgreSQL, Node.js, GraphQL, Performance Engineering
+- Rust, Node.js, TypeScript, PostgreSQL, GraphQL, Performance Engineering
 
 ### Performance & optimization
 
-- Profiling CPU/RAM/I/O, optimisation de requêtes SQL, indexation PostgreSQL, tests de charge (k6), isolation du hot path / jobs asynchrones
+- Profiling CPU / RAM / IO, optimisation des slow-queries SQL (PostgreSQL), tests de charge (k6), isolation du Hot Path, jobs asynchrones
 
 ### Backend development
 
-- TypeScript, Node.js, Bun, Rust, Python, Django, Hono, Apollo Server, graphql-yoga
+- Node.js, Bun, TypeScript, Hono, Rust, Axum, Python, FastAPI
 
 ### APIs & event-driven architectures
 
-- GraphQL (fédération, BFF, graphql-codegen, graphql-inspector), REST, gRPC, OpenAPI/Swagger, event-driven (CDC, CQRS, webhooks), Hasura, Kafka, AWS SNS
+- GraphQL (fédération, BFF, graphql-yoga), REST, gRPC, OpenAPI / Swagger, event-driven (CDC, CQRS, webhooks), Hasura, Kafka, AWS SNS
 
 ### Frontend development
 
-- Vue.js, React, TypeScript
+- Vue.js, React, TypeScript, HTMX
 
 ### Databases
 
@@ -53,7 +55,7 @@
 
 ### Tools & methodologies
 
-- Git, GitLab, GitHub, Bitbucket, Jira, Slack, Segment, Scrum, ADR
+- Git, GitLab, GitHub, Bitbucket, Jira, Slack, Segment, Scrum, ADR, Claude Code
 
 ---
 
@@ -66,7 +68,7 @@
 
 ---
 
-## Professional Experience
+## Experience
 
 ### Février 2024 – Novembre 2025 — SysPay – Settleflow
 
