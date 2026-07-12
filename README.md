@@ -6,15 +6,6 @@ Paris, France | <vangout.cedric@gmail.com> | +33633843340 | in/cedricvangout
 
 ---
 
-## Education
-
-| | |
-| --- | --- |
-| **2014** | EPSI – BTS Services informatiques aux organisations (Programmation) |
-| **2015** | WIS – Bachelor Chef de Projet Digital (Management de projet) |
-
----
-
 ## Skills
 
 ### Top skills
@@ -56,15 +47,6 @@ Paris, France | <vangout.cedric@gmail.com> | +33633843340 | in/cedricvangout
 ### Tools & methodologies
 
 - Git, GitLab, GitHub, Bitbucket, Jira, Slack, Segment, Scrum, ADR, Claude Code
-
----
-
-## Languages
-
-| | |
-| --- | --- |
-| **Anglais** | Professionnel complet |
-| **Français** | Langue maternelle |
 
 ---
 
@@ -252,6 +234,24 @@ Construction des composants critiques de la marketplace, au sein d'une équipe d
 - Accompagnement de la startup dans sa croissance, de 3 à plus de 10 employés, jusqu'à sa deuxième levée de fonds
 
 **Tech stack:** Python, Django, PostgreSQL, Heroku, MangoPay, Algolia
+
+---
+
+## Languages
+
+| | |
+| --- | --- |
+| **Anglais** | Professionnel complet |
+| **Français** | Langue maternelle |
+
+---
+
+## Education
+
+| | |
+| --- | --- |
+| **2014** | EPSI – BTS Services informatiques aux organisations (Programmation) |
+| **2015** | WIS – Bachelor Chef de Projet Digital (Management de projet) |
 
 ---
 
