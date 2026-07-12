@@ -1,6 +1,7 @@
 # Cedric VANGOUT
 
 **Senior Backend Engineer**
+Specialized in high-throughput payment systems, event-driven architectures, and GraphQL APIs. 12+ years of experience across fintech, e-commerce, and SaaS.
 
 Paris, France | <vangout.cedric@gmail.com> | +33633843340 | in/cedricvangout
 
