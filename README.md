@@ -14,7 +14,7 @@ Paris, France | <vangout.cedric@gmail.com> | +33633843340 | in/cedricvangout
 
 ### Performance & optimization
 
-- Profiling CPU / RAM / IO, optimisation des slow-queries SQL (PostgreSQL), tests de charge (k6), isolation du Hot Path, jobs asynchrones
+- CPU / RAM / IO profiling, SQL slow-query optimization (PostgreSQL), load testing (k6), hot path isolation, async jobs
 
 ### Backend development
 
@@ -22,7 +22,7 @@ Paris, France | <vangout.cedric@gmail.com> | +33633843340 | in/cedricvangout
 
 ### APIs & event-driven architectures
 
-- GraphQL (fédération, BFF, graphql-yoga), REST, gRPC, OpenAPI / Swagger, event-driven (CDC, CQRS, webhooks), Hasura, Kafka, AWS SNS
+- GraphQL (federation, BFF, graphql-yoga), REST, gRPC, OpenAPI / Swagger, event-driven (CDC, CQRS, webhooks), Hasura, Kafka, AWS SNS
 
 ### Frontend development
 
@@ -30,7 +30,7 @@ Paris, France | <vangout.cedric@gmail.com> | +33633843340 | in/cedricvangout
 
 ### Databases
 
-- PostgreSQL (CDC, RDS Proxy, indexation), MongoDB
+- PostgreSQL (CDC, RDS Proxy, indexing), MongoDB
 
 ### Cloud
 
@@ -42,7 +42,7 @@ Paris, France | <vangout.cedric@gmail.com> | +33633843340 | in/cedricvangout
 
 ### Compliance & security
 
-- PCI-DSS, RGPD, HL7
+- PCI-DSS, GDPR, HL7
 
 ### Tools & methodologies
 
@@ -52,186 +52,186 @@ Paris, France | <vangout.cedric@gmail.com> | +33633843340 | in/cedricvangout
 
 ## Experience
 
-### Février 2024 – Novembre 2025 — SysPay – Settleflow
+### February 2024 – November 2025 — SysPay – Settleflow
 
-#### Senior Backend Engineer · Architecte Cloud (DevOps)
+#### Senior Backend Engineer · Cloud Architect (DevOps)
 
-Settleflow est un processeur de paiement de type Stripe traitant plusieurs millions de requêtes de paiement par jour dans la zone européenne, avec une couche de réconciliation exécutée en arrière-plan.
+Settleflow is a Stripe-like payment processor handling millions of payment requests per day across Europe, with a reconciliation layer running in the background.
 
 #### Key projects
 
-Conception de l'architecture event-driven et de l'infrastructure cloud du processeur de paiement, au sein d'une équipe de 5 développeurs :
+Designed the event-driven architecture and cloud infrastructure for the payment processor, within a team of 5 engineers:
 
-- Architecture event-driven reposant sur la réplication CDC de PostgreSQL (extension aws_lambda) synchronisée vers AWS SNS et consommée par des fonctions AWS Lambda
-- Émission de webhooks vers les partenaires et alimentation des métriques de facturation et d'analytics à partir du flux d'événements de paiement
-- Infrastructure construite intégralement avec des modules Terraform et des services AWS conformes PCI-DSS (KMS, RDS chiffré, RDS Proxy, VPC segmenté, Lambda, security groups, IAM)
-- API publique de type Stripe, avec traitement de réconciliation exécuté en arrière-plan
+- Event-driven architecture built on PostgreSQL CDC replication (aws_lambda extension) synced to AWS SNS and consumed by AWS Lambda functions
+- Webhook delivery to partners and billing/analytics metrics fed from the payment event stream
+- Infrastructure built entirely with Terraform modules and PCI-DSS-compliant AWS services (KMS, encrypted RDS, RDS Proxy, segmented VPC, Lambda, security groups, IAM)
+- Stripe-like public API with background reconciliation processing
 
 #### Achievements
 
-Pilotage de la performance par les choix d'architecture et d'infrastructure :
+Performance-driven architecture and infrastructure decisions:
 
-- Débit servi jusqu'à 100 000 requêtes de paiement par minute sous 15 ms, avec 900 Lambda concurrentes et un pool RDS Proxy en frontal d'une instance RDS dimensionnée
-- Amélioration du débit d'environ 50× en privilégiant des Lambda auto-scalées plutôt que des instances EC2
-- Réduction de plus de 150 requêtes SQL par requête applicative à moins de 15, grâce à des index PostgreSQL dédiés
-- Atteinte des objectifs de performance en sortant les requêtes SQL non essentielles du hot path pour les exécuter en tâches de fond (background jobs)
-- Optimisation continue de PostgreSQL : activation et résolution des slow query logs, surveillance de la charge CPU (cache) et du nombre maximal de connexions (concurrence des Lambda)
-- Construction d'un CLI d'automatisation CI/CD (ARGC, Rust) profondément intégré à GitLab CI, déployant chaque MR sur un environnement éphémère avec base de données peuplée en moins d'une minute
-- Déploiement en production déclenché par tag Git, avec mise à jour automatique du CHANGELOG (notes de version extraites des commits)
-- Intégration de linters au pipeline : OXC (TypeScript) et Squawk (détection des migrations PostgreSQL dangereuses ou lentes en production)
-- Tests de régression de charge (k6) exécutés sur chaque MR et chaque release
-- Environnement éphémère à base peuplée adopté par l'ensemble des contributeurs, accélérant l'itération et la revue des régressions
+- Served up to 100,000 payment requests per minute under 15 ms, with 900 concurrent Lambdas and an RDS Proxy pool fronting a scaled RDS instance
+- ~50x throughput improvement by choosing auto-scaling Lambdas over EC2 instances
+- Reduced SQL queries per application request from 150+ to under 15 through dedicated PostgreSQL indexes
+- Met performance targets by moving non-critical SQL queries off the hot path into background jobs
+- Continuous PostgreSQL optimization: enabling and resolving slow query logs, monitoring CPU load (cache) and max connections (Lambda concurrency)
+- Built a CI/CD automation CLI (ARGC, Rust) deeply integrated with GitLab CI, deploying each MR to an ephemeral environment with a seeded database in under one minute
+- Git tag-triggered production deployments with automatic CHANGELOG updates (release notes extracted from commits)
+- Pipeline linter integration: OXC (TypeScript) and Squawk (detecting dangerous or slow PostgreSQL migrations in production)
+- Load regression tests (k6) run on every MR and release
+- Seeded ephemeral environments adopted by all contributors, accelerating iteration and regression review
 
-**Tech stack:** TypeScript, Bun, Hono, OpenAPI, Swagger Codegen, Rust, ARGC, OXC, Squawk, PostgreSQL (CDC, extension aws_lambda, RDS Proxy), AWS (Lambda, RDS chiffré, KMS, VPC, security groups, IAM, SNS), Terraform, Bash, k6, GitLab CI/CD, PCI-DSS
+**Tech stack:** TypeScript, Bun, Hono, OpenAPI, Swagger Codegen, Rust, ARGC, OXC, Squawk, PostgreSQL (CDC, aws_lambda extension, RDS Proxy), AWS (Lambda, encrypted RDS, KMS, VPC, security groups, IAM, SNS), Terraform, Bash, k6, GitLab CI/CD, PCI-DSS
 
 ---
 
-### Juin 2022 – Juin 2023 — PrestaShop
+### June 2022 – June 2023 — PrestaShop
 
 #### Senior Backend Engineer · Tech Lead
 
-PrestaShop est la plateforme e-commerce open-source permettant de créer et gérer des boutiques en ligne ; le projet visait à en construire la version SaaS (onboarding.prestashop.com).
+PrestaShop is the open-source e-commerce platform for creating and managing online stores; the project aimed to build its SaaS version (onboarding.prestashop.com).
 
 #### Key projects
 
-Pilotage de la squad « onboarding » (5 développeurs) et construction de la version SaaS de PrestaShop, en collaboration avec les squads « core », « accounts », « billing » et « hosting » :
+Led the "onboarding" squad (5 engineers) and built the SaaS version of PrestaShop, collaborating with the "core", "accounts", "billing", and "hosting" squads:
 
-- Conception et mise en place d'une gateway GraphQL (graphql-yoga, graphql-codegen) composant en fédération les 4 micro-services internes (onboarding, accounts, billing, hosting) sous un BFF unifié pour le frontend Vue
-- Génération d'un client GraphQL type-safe à partir du schéma, produisant des hooks Vue typés
-- Pipeline GitHub Actions exécutant GraphQL Inspector (graphql-inspector) pour détecter les bugs de schéma, breaking changes et régressions, ainsi que les tests, puis publiant une image Docker sur GCP Cloud Run
+- Designed and implemented a GraphQL gateway (graphql-yoga, graphql-codegen) federating 4 internal micro-services (onboarding, accounts, billing, hosting) under a unified BFF for the Vue frontend
+- Generated a type-safe GraphQL client from the schema, producing typed Vue hooks
+- GitHub Actions pipeline running GraphQL Inspector (graphql-inspector) to detect schema bugs, breaking changes, and regressions, plus tests, then publishing a Docker image to GCP Cloud Run
 
 #### Achievements
 
-Reprise et aboutissement d'un projet ayant échoué à trois reprises avant la squad, avec une équipe réduite mais à fort impact dans l'entreprise :
+Took over and delivered a project that had failed three times before, with a small but high-impact team:
 
-- Proposition de l'architecture initiale d'onboarding.prestashop.com, conjointement avec l'engineering manager
-- Rédaction des décisions d'architecture (ADR) et encadrement des développeurs juniors de la squad
-- Animation de réunions d'architecture avec les tech leads des autres squads pour présenter l'architecture cible et arbitrer les points d'intégration et les dépendances de workflows
-- Contributions au code open-source de PrestaShop pour ajouter, de manière générique, des points d'extension adaptés à nos besoins
-- Rétro-ingénierie et contributions (MR) aux bases de code des autres squads afin de tenir les délais et atteindre les objectifs communs
-- Accompagnement des autres squads dans l'apprentissage et l'adoption de GraphQL dans leurs codebases
+- Proposed the initial architecture for onboarding.prestashop.com, jointly with the engineering manager
+- Wrote architecture decision records (ADR) and mentored junior developers in the squad
+- Led architecture meetings with tech leads from other squads to present the target architecture and arbitrate integration points and workflow dependencies
+- Contributed to PrestaShop's open-source codebase to add generic extension points tailored to our needs
+- Reverse-engineered and contributed (MRs) to other squads' codebases to meet deadlines and shared objectives
+- Helped other squads learn and adopt GraphQL in their codebases
 
-**Tech stack:** TypeScript, Node.js, GraphQL (graphql-yoga, graphql-codegen, graphql-inspector, fédération, BFF), Vue.js, GCP (Cloud Run), Docker, GitHub Actions
+**Tech stack:** TypeScript, Node.js, GraphQL (graphql-yoga, graphql-codegen, graphql-inspector, federation, BFF), Vue.js, GCP (Cloud Run), Docker, GitHub Actions
 
 ---
 
-### Mars 2022 – Juin 2022 — elba
+### March 2022 – June 2022 — elba
 
 #### Senior Backend Engineer
 
-elba est un hub de cybersécurité tout-en-un destiné à sécuriser les équipes dans leur travail quotidien.
+elba is an all-in-one cybersecurity hub designed to secure teams in their daily work.
 
 #### Key projects
 
-Intégré à une équipe de 5 développeurs travaillant directement avec le CTO, en charge du développement d'une fonctionnalité autonome, le module « Training » :
+Embedded in a team of 5 engineers working directly with the CTO, responsible for developing a standalone feature, the "Training" module:
 
-- Module « Training » : formulaire complexe multi-étapes évaluant les connaissances des utilisateurs en sécurité, consommant l'API GraphQL Hasura et sauvegardant la progression au fil de l'eau
-- Bascule de l'application vers une approche event-driven en exploitant les fonctionnalités avancées de Hasura (event triggers)
-- Intégration Segment facilitée par cette approche, chaque action devenant nativement un événement
+- "Training" module: complex multi-step form assessing users' security knowledge, consuming the Hasura GraphQL API and persisting progress incrementally
+- Migrated the application to an event-driven approach leveraging Hasura's advanced features (event triggers)
+- Segment integration made seamless by this approach, with every action natively becoming an event
 
 #### Achievements
 
-- Mise en place des évolutions de la configuration Hasura pour la rendre event-driven
-- Livraison du module « Training » de bout en bout : évolutions de l'API Hasura et création des pages front-end en React, en s'appuyant sur le design-system interne
-- Développement d'un connecteur Segment (écouteur d'événements Hasura) transmettant les événements pertinents à Segment
+- Evolved the Hasura configuration to make it event-driven
+- Delivered the "Training" module end-to-end: Hasura API changes and React front-end pages built on the internal design system
+- Built a Segment connector (Hasura event listener) forwarding relevant events to Segment
 
 **Tech stack:** TypeScript, Node.js, React, PostgreSQL, Hasura, Segment, Vercel, GitHub Actions
 
 ---
 
-### Décembre 2021 – Février 2022 — Theodo FinTech
+### December 2021 – February 2022 — Theodo FinTech
 
 #### Senior Backend Engineer
 
-Theodo FinTech développe des applications digitales innovantes pour le secteur de la finance.
+Theodo FinTech builds innovative digital applications for the finance sector.
 
 #### Key projects
 
-Intégré à une équipe de 3 développeurs, contribution à des outils d'administration internes (portail de gestion des employés) :
+Embedded in a team of 3 engineers, contributing to internal administration tools (employee management portal):
 
-- Développement d'une page de gestion du profil employé au sein du portail interne
+- Developed an employee profile management page within the internal portal
 
 #### Achievements
 
-- Extension de l'API GraphQL pour couvrir les nouveaux besoins
-- Mise en place d'un client GraphQL auto-généré via graphql-codegen
-- Ajout de pages et de composants à la codebase React
-- Vérification de l'intégration Kafka afin de garantir la bonne diffusion des événements des nouvelles fonctionnalités au sein de l'architecture CQRS
+- Extended the GraphQL API to cover new requirements
+- Set up an auto-generated GraphQL client via graphql-codegen
+- Added pages and components to the React codebase
+- Verified the Kafka integration to ensure proper event propagation for new features within the CQRS architecture
 
 **Tech stack:** Node.js, TypeScript, GraphQL, Apollo Server, React, MongoDB, Kafka, CQRS
 
 ---
 
-### Novembre 2020 – Avril 2021 — PromTime
+### November 2020 – April 2021 — PromTime
 
 #### Senior Backend Engineer
 
-PromTime est une société de data science qui compare en temps réel les gains de santé des patients.
+PromTime is a data science company that compares patient health outcomes in real time.
 
 #### Key projects
 
-Intégré à une équipe de 3 développeurs travaillant directement avec le CTO, sélectionné pour mon expertise GraphQL afin de bâtir une API d'ingestion de données à fort volume (PROMs) :
+Embedded in a team of 3 engineers working directly with the CTO, selected for my GraphQL expertise to build a high-volume data ingestion API (PROMs):
 
-- Étude de la spécification PROM pour proposer un schéma GraphQL pragmatique, articulant données fixes et données dynamiques
-- Construction de l'API GraphQL d'ingestion (Apollo Server) avec playground interactif pour collecter les données auprès des partenaires
-- Conception du serveur GraphQL dans le respect des exigences RGPD et de la norme HL7
+- Studied the PROM specification to propose a pragmatic GraphQL schema bridging fixed and dynamic data
+- Built the GraphQL ingestion API (Apollo Server) with an interactive playground to collect data from partners
+- Designed the GraphQL server in compliance with GDPR requirements and the HL7 standard
 
 #### Achievements
 
-- Livraison d'une API GraphQL conséquente, fidèle à la spécification PROM, avec playground interactif et bonnes pratiques RGPD + HL7
-- Rédaction d'une documentation détaillée pour les partenaires : la spécification PROM étant complexe, l'exactitude du mapping des champs est capitale pour les opérations de l'entreprise
-- Aucune remarque bloquante remontée lors de l'audit de sécurité réalisé en fin de mission
+- Delivered a comprehensive GraphQL API faithful to the PROM specification, with interactive playground and GDPR + HL7 best practices
+- Wrote detailed documentation for partners: the PROM specification being complex, accurate field mapping is critical for business operations
+- No blocking issues raised during the security audit conducted at the end of the engagement
 
-**Tech stack:** TypeScript, Node.js, GraphQL, Apollo Server, PostgreSQL, GCP, Bitbucket, RGPD, HL7
+**Tech stack:** TypeScript, Node.js, GraphQL, Apollo Server, PostgreSQL, GCP, Bitbucket, GDPR, HL7
 
 ---
 
-### Janvier 2017 – Octobre 2020 — Freelance – missions diverses
+### January 2017 – October 2020 — Freelance – Various engagements
 
 #### Backend Engineer · Tech Lead
 
-Missions freelance en régie, embarqué dans les équipes clients, auprès de startups, scale-ups et grands comptes des secteurs fintech, immobilier, mobilité et e-commerce (développement full-stack et mobile).
+Freelance engagements embedded in client teams, working with startups, scale-ups, and large enterprises in fintech, real estate, mobility, and e-commerce (full-stack and mobile development).
 
 #### Key projects
 
-Interventions en tant que développeur et tech lead sur des missions variées :
+Worked as a developer and tech lead across multiple engagements:
 
-- **SNCF Connect & Tech** : recruté pour mon expertise GraphQL, contribution à un formulaire complexe multi-étapes (AWS Amplify)
-- **Piteo (Tech Lead)** : pilotage de l'architecture d'une API GraphQL permettant aux bailleurs de gérer leur portefeuille immobilier
-- **LSF Énergie** : développement d'un scraper Python intégrant l'OCR Google Vision pour automatiser le travail des employés
+- **SNCF Connect & Tech**: hired for my GraphQL expertise, contributed to a complex multi-step form (AWS Amplify)
+- **Piteo (Tech Lead)**: led the architecture of a GraphQL API enabling landlords to manage their real estate portfolio
+- **LSF Énergie**: built a Python scraper integrating Google Vision OCR to automate employee workflows
 
 #### Achievements
 
-Responsabilités d'architecture applicative et d'infrastructure :
+Application architecture and infrastructure responsibilities:
 
-- Conception de l'architecture applicative : design des schémas GraphQL et choix techniques
-- Mise en place from scratch des infrastructures cloud sur les projets green-field (Heroku, GCP, AWS)
-- Construction des pipelines CI/CD de déploiement (GitHub Actions, GitLab CI)
-- Monitoring des déploiements en production
-- Encadrement technique au sein des équipes clients
+- Designed application architecture: GraphQL schema design and technical decisions
+- Set up cloud infrastructure from scratch on greenfield projects (Heroku, GCP, AWS)
+- Built CI/CD deployment pipelines (GitHub Actions, GitLab CI)
+- Monitored production deployments
+- Provided technical mentorship within client teams
 
 **Tech stack:** TypeScript, Node.js, GraphQL, React, Python (Google Vision OCR), PostgreSQL, AWS (Amplify), GCP, Heroku, GitHub Actions, GitLab CI
 
 ---
 
-### Octobre 2014 – Décembre 2016 — jestocke.com
+### October 2014 – December 2016 — jestocke.com
 
 #### Backend Engineer · Tech Lead
 
-jestocke.com est une marketplace en ligne de location d'espaces de stockage inutilisés entre particuliers.
+jestocke.com is a peer-to-peer online marketplace for renting unused storage spaces.
 
 #### Key projects
 
-Construction des composants critiques de la marketplace, au sein d'une équipe de 5 développeurs :
+Built critical marketplace components within a team of 5 engineers:
 
-- Moteur de recherche des annonces pour les utilisateurs (Algolia)
-- Système de réservation et de paiement entre particuliers (MangoPay)
+- Listing search engine for users (Algolia)
+- Peer-to-peer booking and payment system (MangoPay)
 
 #### Achievements
 
-- Responsable de la gestion et du monitoring de l'infrastructure de production (Heroku)
-- Participation à la structuration de l'équipe technique, passée de 2 à 5 développeurs, et recrutement de nouveaux membres
-- Accompagnement de la startup dans sa croissance, de 3 à plus de 10 employés, jusqu'à sa deuxième levée de fonds
+- Managed and monitored the production infrastructure (Heroku)
+- Helped structure the engineering team from 2 to 5 developers, and recruited new members
+- Supported the startup's growth from 3 to 10+ employees through its second funding round
 
 **Tech stack:** Python, Django, PostgreSQL, Heroku, MangoPay, Algolia
 
@@ -241,8 +241,8 @@ Construction des composants critiques de la marketplace, au sein d'une équipe d
 
 | | |
 | --- | --- |
-| **Anglais** | Professionnel complet |
-| **Français** | Langue maternelle |
+| **English** | Full professional proficiency |
+| **French** | Native |
 
 ---
 
