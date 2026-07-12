@@ -70,7 +70,7 @@
 
 ### Février 2024 – Novembre 2025 — SysPay – Settleflow
 
-#### Senior Software Engineer · Architecte Cloud (DevOps)
+#### Senior Backend Engineer · Architecte Cloud (DevOps)
 
 Settleflow est un processeur de paiement de type Stripe traitant plusieurs millions de requêtes de paiement par jour dans la zone européenne, avec une couche de réconciliation exécutée en arrière-plan.
 
@@ -104,7 +104,7 @@ Pilotage de la performance par les choix d'architecture et d'infrastructure :
 
 ### Juin 2022 – Juin 2023 — PrestaShop
 
-#### Senior Software Engineer · Tech Lead
+#### Senior Backend Engineer · Tech Lead
 
 PrestaShop est la plateforme e-commerce open-source permettant de créer et gérer des boutiques en ligne ; le projet visait à en construire la version SaaS (onboarding.prestashop.com).
 
@@ -133,7 +133,7 @@ Reprise et aboutissement d'un projet ayant échoué à trois reprises avant la s
 
 ### Mars 2022 – Juin 2022 — elba
 
-#### Senior Software Engineer
+#### Senior Backend Engineer
 
 elba est un hub de cybersécurité tout-en-un destiné à sécuriser les équipes dans leur travail quotidien.
 
@@ -157,7 +157,7 @@ Intégré à une équipe de 5 développeurs travaillant directement avec le CTO,
 
 ### Décembre 2021 – Février 2022 — Theodo FinTech
 
-#### Senior Software Engineer
+#### Senior Backend Engineer
 
 Theodo FinTech développe des applications digitales innovantes pour le secteur de la finance.
 
@@ -180,7 +180,7 @@ Intégré à une équipe de 3 développeurs, contribution à des outils d'admini
 
 ### Novembre 2020 – Avril 2021 — PromTime
 
-#### Senior Software Engineer
+#### Senior Backend Engineer
 
 PromTime est une société de data science qui compare en temps réel les gains de santé des patients.
 
@@ -204,7 +204,7 @@ Intégré à une équipe de 3 développeurs travaillant directement avec le CTO,
 
 ### Janvier 2017 – Octobre 2020 — Freelance – missions diverses
 
-#### Software Engineer · Tech Lead
+#### Backend Engineer · Tech Lead
 
 Missions freelance en régie, embarqué dans les équipes clients, auprès de startups, scale-ups et grands comptes des secteurs fintech, immobilier, mobilité et e-commerce (développement full-stack et mobile).
 
@@ -232,7 +232,7 @@ Responsabilités d'architecture applicative et d'infrastructure :
 
 ### Octobre 2014 – Décembre 2016 — jestocke.com
 
-#### Software Engineer · Tech Lead
+#### Backend Engineer · Tech Lead
 
 jestocke.com est une marketplace en ligne de location d'espaces de stockage inutilisés entre particuliers.
 
