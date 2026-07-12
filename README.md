@@ -3,51 +3,28 @@
 **Senior Backend Engineer**
 Specialized in high-throughput payment systems, event-driven architectures, and GraphQL APIs. 12+ years of experience across fintech, e-commerce, and SaaS.
 
-Paris, France | <vangout.cedric@gmail.com> | +33633843340 | in/cedricvangout
+Paris, France | <vangout.cedric@gmail.com> | +33633843340 | [LinkedIn](https://www.linkedin.com/in/cedricvangout)
 
 ---
 
 ## Skills
 
-### Top skills
+### Core
 
 - Rust, Node.js, TypeScript, PostgreSQL, GraphQL, Performance Engineering
 
-### Performance & optimization
+### Backend & APIs
 
-- CPU / RAM / IO profiling, SQL slow-query optimization (PostgreSQL), load testing (k6), hot path isolation, async jobs
+- Node.js, Bun, Hono, Rust, Axum, Python, FastAPI
+- GraphQL (federation, BFF, graphql-yoga), REST, gRPC, OpenAPI, event-driven (CDC, CQRS, webhooks), Hasura, Kafka
+- PostgreSQL (CDC, RDS Proxy, indexing, slow-query optimization), MongoDB
+- CPU / RAM / IO profiling, load testing (k6), hot path isolation
 
-### Backend development
-
-- Node.js, Bun, TypeScript, Hono, Rust, Axum, Python, FastAPI
-
-### APIs & event-driven architectures
-
-- GraphQL (federation, BFF, graphql-yoga), REST, gRPC, OpenAPI / Swagger, event-driven (CDC, CQRS, webhooks), Hasura, Kafka, AWS SNS
-
-### Frontend development
-
-- Vue.js, React, TypeScript, HTMX
-
-### Databases
-
-- PostgreSQL (CDC, RDS Proxy, indexing), MongoDB
-
-### Cloud
+### Cloud & Infrastructure
 
 - AWS (Lambda, RDS, KMS, VPC, IAM, SNS, S3, Amplify), GCP (Cloud Run), Heroku, Vercel
-
-### Infrastructure & CI/CD
-
-- Terraform, Docker, GitLab CI, GitHub Actions, Bash, ARGC, OXC, Squawk, graphql-inspector
-
-### Compliance & security
-
+- Terraform, Docker, GitLab CI, GitHub Actions
 - PCI-DSS, GDPR, HL7
-
-### Tools & methodologies
-
-- Git, GitLab, GitHub, Bitbucket, Jira, Slack, Segment, Scrum, ADR, Claude Code
 
 ---
 
@@ -103,7 +80,7 @@ Led the "onboarding" squad (5 engineers) and built the SaaS version of PrestaSho
 
 #### Achievements
 
-Took over and delivered a project that had failed three times before, with a small but high-impact team:
+Took over and delivered ahead of schedule a project that had failed three times before, onboarding 100+ merchants with a small but high-impact team:
 
 - Proposed the initial architecture for onboarding.prestashop.com, jointly with the engineering manager
 - Wrote architecture decision records (ADR) and mentored junior developers in the squad
@@ -126,7 +103,7 @@ elba is an all-in-one cybersecurity hub designed to secure teams in their daily 
 
 Embedded in a team of 5 engineers working directly with the CTO, responsible for developing a standalone feature, the "Training" module:
 
-- "Training" module: complex multi-step form assessing users' security knowledge, consuming the Hasura GraphQL API and persisting progress incrementally
+- "Training" module: 50+ step form assessing users' security knowledge, serving 1,000+ users, consuming the Hasura GraphQL API and persisting progress incrementally
 - Migrated the application to an event-driven approach leveraging Hasura's advanced features (event triggers)
 - Segment integration made seamless by this approach, with every action natively becoming an event
 
@@ -173,8 +150,8 @@ PromTime is a data science company that compares patient health outcomes in real
 
 Embedded in a team of 3 engineers working directly with the CTO, selected for my GraphQL expertise to build a high-volume data ingestion API (PROMs):
 
-- Studied the PROM specification to propose a pragmatic GraphQL schema bridging fixed and dynamic data
-- Built the GraphQL ingestion API (Apollo Server) with an interactive playground to collect data from partners
+- Studied the PROM specification to propose a pragmatic GraphQL schema (300+ fields) bridging fixed and dynamic data
+- Built the GraphQL ingestion API (Apollo Server) with an interactive playground, collecting data from 20 partners (~2,000 patient records/day)
 - Designed the GraphQL server in compliance with GDPR requirements and the HL7 standard
 
 #### Achievements
@@ -197,19 +174,9 @@ Freelance engagements embedded in client teams, working with startups, scale-ups
 
 Worked as a developer and tech lead across multiple engagements:
 
-- **SNCF Connect & Tech**: hired for my GraphQL expertise, contributed to a complex multi-step form (AWS Amplify)
-- **Piteo (Tech Lead)**: led the architecture of a GraphQL API enabling landlords to manage their real estate portfolio
-- **LSF Énergie**: built a Python scraper integrating Google Vision OCR to automate employee workflows
-
-#### Achievements
-
-Application architecture and infrastructure responsibilities:
-
-- Designed application architecture: GraphQL schema design and technical decisions
-- Set up cloud infrastructure from scratch on greenfield projects (Heroku, GCP, AWS)
-- Built CI/CD deployment pipelines (GitHub Actions, GitLab CI)
-- Monitored production deployments
-- Provided technical mentorship within client teams
+- **SNCF Connect & Tech**: hired for my GraphQL expertise, built a complex multi-step form on AWS Amplify; designed the GraphQL schema and technical architecture
+- **Piteo (Tech Lead)**: led the architecture of a GraphQL API enabling landlords to manage their real estate portfolio; set up cloud infrastructure from scratch (Heroku) and CI/CD pipelines
+- **LSF Énergie**: built a Python scraper integrating Google Vision OCR to automate employee workflows; set up GCP infrastructure and production monitoring
 
 **Tech stack:** TypeScript, Node.js, GraphQL, React, Python (Google Vision OCR), PostgreSQL, AWS (Amplify), GCP, Heroku, GitHub Actions, GitLab CI
 
@@ -225,14 +192,14 @@ jestocke.com is a peer-to-peer online marketplace for renting unused storage spa
 
 Built critical marketplace components within a team of 5 engineers:
 
-- Listing search engine for users (Algolia)
-- Peer-to-peer booking and payment system (MangoPay)
+- Listing search engine indexing 20K+ listings (Algolia)
+- Peer-to-peer booking and payment system handling 100K+ transactions (MangoPay)
 
 #### Achievements
 
 - Managed and monitored the production infrastructure (Heroku)
 - Helped structure the engineering team from 2 to 5 developers, and recruited new members
-- Supported the startup's growth from 3 to 10+ employees through its second funding round
+- Supported the startup's growth from 3 to 10+ employees through its second funding round (€2M)
 
 **Tech stack:** Python, Django, PostgreSQL, Heroku, MangoPay, Algolia
 
@@ -256,10 +223,16 @@ Built critical marketplace components within a team of 5 engineers:
 
 ---
 
+## Open Source
+
+- [supabase-community/postgres-language-server](https://github.com/supabase-community/postgres-language-server) — A Language Server for PostgreSQL. Top #2 contributor.
+
+---
+
 ## References
 
-- Mouad Chaouki - Tech Lead (SysPay)
-- Gautier Boudeweel - Engineering Manager (PrestaShop)
-- Antoine Berton - CTO (elba)
-- Alexandre Blondin - Tech Lead (Theodo FinTech)
-- Loic Calvy - CTO (PromTime)
+- [Mouad Chaouki](https://www.linkedin.com/in/mouad-chaouki) - Tech Lead (SysPay)
+- [Gautier Boudeweel](https://www.linkedin.com/in/gautier-boudeweel) - Engineering Manager (PrestaShop)
+- [Antoine Berton](https://www.linkedin.com/in/antoine-berton-532519225) - CTO (elba)
+- [Alexandre Blondin](https://www.linkedin.com/in/alexandre-blondin-295b44a8) - Tech Lead (Theodo FinTech)
+- [Loic Calvy](https://www.linkedin.com/in/loïc-calvy) - CTO (PromTime)
