@@ -70,7 +70,7 @@ Designed the event-driven architecture and cloud infrastructure for the payment 
 - Webhook delivery to partners and billing/analytics metrics fed from the payment event stream
 - Infrastructure built entirely with Terraform modules and PCI-DSS-compliant AWS services (KMS, encrypted RDS, RDS Proxy, segmented VPC, Lambda, security groups, IAM)
 - Stripe-like public API with background reconciliation processing
-- Met performance targets by moving non-critical SQL queries off the hot path into background jobs
+- Moved non-critical SQL queries off the hot path into background jobs
 - Continuous PostgreSQL optimization: enabling and resolving slow query logs, monitoring CPU load (cache) and max connections (Lambda concurrency)
 - Built a CI/CD automation CLI (ARGC, Rust) deeply integrated with GitLab CI, deploying each MR to an ephemeral environment with a seeded database in under one minute
 - Git tag-triggered production deployments with automatic CHANGELOG updates (release notes extracted from commits)
@@ -128,12 +128,9 @@ elba is an all-in-one cybersecurity hub designed to secure teams in their daily 
 
 Embedded in a team of 5 engineers working directly with the CTO, responsible for developing a standalone feature, the "Training" module:
 
-- "Training" module: 50+ step form assessing users' security knowledge, serving 1,000+ users, consuming the Hasura GraphQL API and persisting progress incrementally
-- Migrated the application to an event-driven approach leveraging Hasura's advanced features (event triggers)
-- Segment integration made seamless by this approach, with every action natively becoming an event
-- Evolved the Hasura configuration to make it event-driven
-- Delivered the "Training" module end-to-end: Hasura API changes and React front-end pages built on the internal design system
-- Built a Segment connector (Hasura event listener) forwarding relevant events to Segment
+- Delivered the "Training" module end-to-end: a 50+ step form assessing users' security knowledge (1,000+ users), consuming the Hasura GraphQL API and persisting progress incrementally, with React pages built on the internal design system
+- Migrated the application to an event-driven approach using Hasura event triggers
+- Built a Segment connector (Hasura event listener) forwarding relevant events — made seamless since every action was natively an event
 
 **Tech stack:** TypeScript, Node.js, React, PostgreSQL, Hasura, Segment, Vercel, GitHub Actions
 
