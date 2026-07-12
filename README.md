@@ -225,8 +225,8 @@ Built critical marketplace components within a team of 5 engineers:
 
 | | |
 | --- | --- |
-| **2014** | EPSI – BTS Services informatiques aux organisations (Programmation) |
-| **2015** | WIS – Bachelor Chef de Projet Digital (Management de projet) |
+| **2012 - 2014** | EPSI – BTS Services informatiques aux organisations (Programmation) |
+| **2014 - 2015** | WIS – Bachelor Chef de Projet Digital (Management de projet) |
 
 ---
 
@@ -237,3 +237,4 @@ Built critical marketplace components within a team of 5 engineers:
 - [Antoine Berton](https://www.linkedin.com/in/antoine-berton-532519225) - CTO (elba)
 - [Alexandre Blondin](https://www.linkedin.com/in/alexandre-blondin-295b44a8) - Tech Lead (Theodo FinTech)
 - [Loic Calvy](https://www.linkedin.com/in/loïc-calvy) - CTO (PromTime)
+- [Laure Courty](https://www.linkedin.com/in/laure-courty-09406678) - CEO (jestocke.com)
