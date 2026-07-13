@@ -19,3 +19,14 @@ jobs:
             - uses: oven-sh/setup-bun@v2
             - run: bun install --frozen-lockfile
             - run: bun run lint
+
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - uses: oven-sh/setup-bun@v2
+            - run: bun run build
+            - uses: actions/upload-artifact@v4
+              with:
+                  name: resume
+                  path: dist/resume.pdf

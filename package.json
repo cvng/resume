@@ -1,6 +1,7 @@
 {
     "name": "cv",
     "scripts": {
+        "build": "scripts/generate-pdf.sh",
         "lint": "markdownlint-cli2 README.md"
     },
     "devDependencies": {
