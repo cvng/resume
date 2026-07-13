@@ -234,8 +234,8 @@ jestocke.com is a peer-to-peer online marketplace for renting unused storage spa
 
 | | |
 | --- | --- |
-| **English** | Full professional proficiency |
-| **French** | Native |
+| **English** | Native or bilingual proficiency |
+| **French** | Native or bilingual proficiency |
 
 ---
 
