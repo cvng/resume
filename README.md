@@ -84,7 +84,7 @@ Designed the event-driven architecture and cloud infrastructure for the payment 
 - Reduced SQL queries per application request from 150+ to under 15 through dedicated PostgreSQL indexes
 - Seeded ephemeral environments adopted by all contributors, accelerating iteration and regression review
 
-**Tech stack:** TypeScript, Bun, Hono, OpenAPI, Swagger Codegen, Rust, ARGC, OXC, Squawk, PostgreSQL (CDC, aws_lambda extension, RDS Proxy), AWS (Lambda, encrypted RDS, KMS, VPC, security groups, IAM, SNS), Terraform, Bash, k6, GitLab CI/CD, PCI-DSS
+**Tech stack:** TypeScript, Bun, Hono, OpenAPI, Swagger Codegen, Rust, ARGC, OXC, Squawk, PostgreSQL (CDC, aws_lambda extension, RDS Proxy), AWS (Lambda, encrypted RDS, KMS, VPC, security groups, IAM, SNS), Terraform, Bash, k6, GitLab CI/CD, PCI-DSS, OpenTelemetry
 
 ---
 
