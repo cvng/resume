@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -euo pipefail
+set -euo pipefail -x
 
 # Markdown → HTML → PDF pipeline
 # Usage: scripts/generate-pdf.sh
