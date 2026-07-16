@@ -1,7 +1,7 @@
 {
     "name": "resume",
     "scripts": {
-        "build": "scripts/generate-pdf.ts README.md dist/resume.pdf",
+        "build": "scripts/generate-pdf.ts README.md dist/cvng.pdf",
         "lint": "markdownlint-cli2 README.md"
     },
     "devDependencies": {
