@@ -1,5 +1,5 @@
 {
-    "name": "cv",
+    "name": "resume",
     "scripts": {
         "build": "scripts/generate-pdf.ts README.md dist/resume.pdf",
         "lint": "markdownlint-cli2 README.md"
