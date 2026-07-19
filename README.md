@@ -1,6 +1,6 @@
 # Cedric VANGOUT
 
-**Senior Backend Engineer**
+**Senior Software Engineer**
 Specialized in high-throughput payment systems, event-driven architectures, and GraphQL APIs. 12+ years of experience across fintech, e-commerce, and SaaS.
 
 Paris, France | <vangout.cedric@gmail.com> | [Calendly](https://calendly.com/cvng/30min) | [LinkedIn](https://www.linkedin.com/in/cedricvangout)
@@ -41,7 +41,7 @@ Paris, France | <vangout.cedric@gmail.com> | [Calendly](https://calendly.com/cvn
 
 ### February 2026 – Present — Freelance – Short-term engagements
 
-#### Senior Backend Engineer · AI Enablement
+#### Senior Software Engineer · AI Enablement
 
 Short backend engagements and AI-adoption consulting for startups.
 
@@ -56,7 +56,7 @@ Short backend engagements and AI-adoption consulting for startups.
 
 ### February 2024 – November 2025 — SysPay – Settleflow
 
-#### Senior Backend Engineer · Cloud Architect (DevOps)
+#### Senior Software Engineer · Cloud Architect (DevOps)
 
 Settleflow is a Stripe-like payment processor handling millions of payment requests per day across Europe, with a reconciliation layer running in the background ([settleflow.io](https://settleflow.io)).
 
@@ -90,7 +90,7 @@ Designed the event-driven architecture and cloud infrastructure for the payment 
 
 ### June 2022 – June 2023 — PrestaShop
 
-#### Senior Backend Engineer · Tech Lead
+#### Senior Software Engineer · Tech Lead
 
 PrestaShop is the open-source e-commerce platform for creating and managing online stores; the project aimed to build its SaaS version ([onboarding.prestashop.com](https://onboarding.prestashop.com)).
 
@@ -120,7 +120,7 @@ Led the "onboarding" squad (5 engineers) and built the SaaS version of PrestaSho
 
 ### March 2022 – June 2022 — elba
 
-#### Senior Backend Engineer
+#### Senior Software Engineer
 
 elba is an all-in-one cybersecurity hub designed to secure teams in their daily work ([elba.security](https://elba.security)).
 
@@ -138,7 +138,7 @@ Embedded in a team of 5 engineers working directly with the CTO, responsible for
 
 ### December 2021 – February 2022 — Theodo FinTech
 
-#### Senior Backend Engineer
+#### Senior Software Engineer
 
 Theodo FinTech builds innovative digital applications for the finance sector.
 
@@ -158,7 +158,7 @@ Embedded in a team of 3 engineers, contributing to internal administration tools
 
 ### November 2020 – April 2021 — PromTime
 
-#### Senior Backend Engineer
+#### Senior Software Engineer
 
 PromTime is a data science company that compares patient health outcomes in real time ([promtime.org](https://promtime.org)).
 
@@ -184,7 +184,7 @@ Embedded in a team of 3 engineers working directly with the CTO, selected for my
 
 ### January 2017 – October 2020 — Freelance – Various engagements
 
-#### Backend Engineer · Tech Lead
+#### Software Engineer · Tech Lead
 
 Freelance engagements embedded in client teams, working with startups, scale-ups, and large enterprises in fintech, real estate, mobility, and e-commerce (full-stack and mobile development).
 
@@ -202,7 +202,7 @@ Worked as a developer and tech lead across multiple engagements:
 
 ### October 2014 – December 2016 — jestocke.com
 
-#### Backend Engineer · Tech Lead
+#### Software Engineer · Tech Lead
 
 jestocke.com is a peer-to-peer online marketplace for renting unused storage spaces ([jestocke.com](https://jestocke.com)).
 
