@@ -1,0 +1,16 @@
+// tsc-only config: maps markdownresume deep imports to local stubs in types/
+// so tsc doesn't typecheck that package's Next.js source. Kept out of
+// tsconfig.json because Bun honors "paths" at runtime and would load the
+// stubs instead of the real modules.
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "paths": {
+            "markdownresume/src/app/api/generate-pdf/route": [
+                "./types/markdownresume/generate-pdf-route.d.ts"
+            ],
+            "markdownresume/src/lib/constants": ["./types/markdownresume/constants.d.ts"]
+        }
+    },
+    "include": ["scripts", "types"]
+}
