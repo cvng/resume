@@ -20,8 +20,28 @@ jobs:
             - run: bun install --frozen-lockfile
             - run: bun run lint
 
-    review:
+    ci_workflow_changed:
         if: github.event_name == 'pull_request' && github.event.pull_request.draft == false
+        runs-on: ubuntu-latest
+        outputs:
+            changed: ${{ steps.check.outputs.changed }}
+        steps:
+            - name: Check if ci.yml changed
+              id: check
+              env:
+                  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  PR_NUMBER: ${{ github.event.pull_request.number }}
+              run: |
+                  if gh pr diff "$PR_NUMBER" --name-only | grep -qx '.github/workflows/ci.yml'; then
+                      echo "ci.yml is part of this PR's diff; review can't self-validate it."
+                      echo "changed=true" >> "$GITHUB_OUTPUT"
+                  else
+                      echo "changed=false" >> "$GITHUB_OUTPUT"
+                  fi
+
+    review:
+        needs: ci_workflow_changed
+        if: needs.ci_workflow_changed.result == 'success' && needs.ci_workflow_changed.outputs.changed != 'true'
         runs-on: ubuntu-latest
         permissions:
             contents: read
@@ -57,7 +77,7 @@ jobs:
                   PR_NUMBER: ${{ github.event.pull_request.number }}
               run: |
                   if [ -z "$STRUCTURED_OUTPUT" ]; then
-                      echo "::error::Claude review produced no structured verdict (e.g. this PR edits ci.yml itself, which the action refuses to self-review)."
+                      echo "::error::Claude review produced no structured verdict. Failing closed."
                       exit 1
                   fi
                   blocking=$(jq -r '.blocking // false' <<< "$STRUCTURED_OUTPUT")
