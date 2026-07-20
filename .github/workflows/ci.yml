@@ -20,6 +20,77 @@ jobs:
             - run: bun install --frozen-lockfile
             - run: bun run lint
 
+    ci_workflow_changed:
+        if: github.event_name == 'pull_request' && github.event.pull_request.draft == false
+        runs-on: ubuntu-latest
+        outputs:
+            changed: ${{ steps.check.outputs.changed }}
+        steps:
+            - name: Check if ci.yml changed
+              id: check
+              env:
+                  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  PR_NUMBER: ${{ github.event.pull_request.number }}
+                  GH_REPO: ${{ github.repository }}
+              run: |
+                  if gh pr diff "$PR_NUMBER" --name-only | grep -qx '.github/workflows/ci.yml'; then
+                      echo "ci.yml is part of this PR's diff; review can't self-validate it."
+                      echo "changed=true" >> "$GITHUB_OUTPUT"
+                  else
+                      echo "changed=false" >> "$GITHUB_OUTPUT"
+                  fi
+
+    review:
+        needs: ci_workflow_changed
+        if: needs.ci_workflow_changed.result == 'success' && needs.ci_workflow_changed.outputs.changed != 'true'
+        runs-on: ubuntu-latest
+        permissions:
+            contents: read
+            pull-requests: write
+            id-token: write
+        steps:
+            - uses: actions/checkout@v7
+              with:
+                  ref: ${{ github.event.pull_request.head.sha }}
+                  fetch-depth: 1
+            - uses: anthropics/claude-code-action@v1
+              id: review
+              with:
+                  claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+                  track_progress: true
+                  prompt: |
+                      /code-review ${{ github.event.pull_request.number }} --comment
+
+                      After posting the review comments, respond with a final JSON
+                      object matching the given schema. Set "blocking" to true only
+                      if at least one finding is severe enough that this PR must not
+                      be merged as-is (broken build pipeline, corrupted PDF output,
+                      incorrect resume content). Cosmetic or optional suggestions are
+                      not blocking.
+                  claude_args: |
+                      --allowedTools "mcp__github_inline_comment__create_inline_comment,Bash(gh pr comment:*),Bash(gh pr diff:*),Bash(gh pr view:*)"
+                      --output-format json
+                      --json-schema "{\"type\":\"object\",\"properties\":{\"blocking\":{\"type\":\"boolean\"},\"reason\":{\"type\":\"string\"}},\"required\":[\"blocking\"]}"
+            - name: Submit review verdict
+              env:
+                  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  STRUCTURED_OUTPUT: ${{ steps.review.outputs.structured_output }}
+                  PR_NUMBER: ${{ github.event.pull_request.number }}
+              run: |
+                  if [ -z "$STRUCTURED_OUTPUT" ]; then
+                      echo "::error::Claude review produced no structured verdict. Failing closed."
+                      exit 1
+                  fi
+                  blocking=$(jq -r '.blocking // false' <<< "$STRUCTURED_OUTPUT")
+                  reason=$(jq -r '.reason // "See inline comments."' <<< "$STRUCTURED_OUTPUT")
+                  if [ "$blocking" = "true" ]; then
+                      gh pr review "$PR_NUMBER" --request-changes --body "Blocking findings: $reason"
+                      echo "::error::Claude review found blocking issues: $reason"
+                      exit 1
+                  else
+                      gh pr review "$PR_NUMBER" --approve --body "No blocking findings. $reason"
+                  fi
+
     build:
         runs-on: ubuntu-latest
         steps:
