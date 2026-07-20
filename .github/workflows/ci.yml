@@ -31,6 +31,7 @@ jobs:
               env:
                   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                   PR_NUMBER: ${{ github.event.pull_request.number }}
+                  GH_REPO: ${{ github.repository }}
               run: |
                   if gh pr diff "$PR_NUMBER" --name-only | grep -qx '.github/workflows/ci.yml'; then
                       echo "ci.yml is part of this PR's diff; review can't self-validate it."
