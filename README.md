@@ -32,7 +32,7 @@ Paris, France | French | <vangout.cedric@gmail.com> | [Calendly](https://calendl
 ### Cloud & Infrastructure
 
 - AWS (Lambda, RDS, KMS, VPC, IAM, SNS, S3, Amplify), GCP (Cloud Run), Heroku, Vercel
-- Terraform, Docker, GitLab CI, GitHub Actions
+- Terraform, Docker, GitLab CI, GitHub Actions, OpenTelemetry
 - PCI-DSS, GDPR, HL7
 
 ---
