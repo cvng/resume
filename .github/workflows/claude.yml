@@ -30,30 +30,8 @@ jobs:
                   claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
                   use_commit_signing: true
 
-    skip_check:
-        if: github.event_name == 'pull_request' && github.event.pull_request.draft == false
-        runs-on: ubuntu-latest
-        outputs:
-            skip: ${{ steps.check.outputs.skip }}
-        steps:
-            - uses: actions/checkout@v7
-              with:
-                  ref: ${{ github.event.pull_request.head.sha }}
-                  fetch-depth: 1
-            - name: Check skip marker
-              id: check
-              run: |
-                  msg=$(git log -1 --format=%B)
-                  if grep -qiE '\[skip[- ]claude\]|\[claude[- ]skip\]' <<< "$msg"; then
-                      echo "Skip marker found in HEAD commit message; skipping review."
-                      echo "skip=true" >> "$GITHUB_OUTPUT"
-                  else
-                      echo "skip=false" >> "$GITHUB_OUTPUT"
-                  fi
-
     review:
-        needs: skip_check
-        if: needs.skip_check.outputs.skip != 'true'
+        if: github.event_name == 'pull_request' && github.event.pull_request.draft == false
         runs-on: ubuntu-latest
         permissions:
             contents: read
@@ -89,7 +67,7 @@ jobs:
                   PR_NUMBER: ${{ github.event.pull_request.number }}
               run: |
                   if [ -z "$STRUCTURED_OUTPUT" ]; then
-                      echo "::error::Claude review produced no structured verdict (e.g. this PR edits claude.yml itself, which the action refuses to self-review). Failing closed — use [skip-claude] in a commit message to bypass intentionally."
+                      echo "::error::Claude review produced no structured verdict (e.g. this PR edits claude.yml itself, which the action refuses to self-review)."
                       exit 1
                   fi
                   blocking=$(jq -r '.blocking // false' <<< "$STRUCTURED_OUTPUT")
