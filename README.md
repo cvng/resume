@@ -20,19 +20,20 @@ Paris, France | French | <vangout.cedric@gmail.com> | [Calendly](https://calendl
 
 ### Core
 
-- Rust, Node.js, TypeScript, PostgreSQL, GraphQL, Performance Engineering
+- TypeScript, Rust, Node.js, PostgreSQL, GraphQL, Performance Engineering
 
 ### Backend & APIs
 
-- Node.js, Bun, Hono, Rust, Axum, Python, FastAPI
-- GraphQL (federation, BFF, graphql-yoga), REST, gRPC, OpenAPI, event-driven (CDC, CQRS, webhooks), Hasura, Kafka
+- Node.js, Bun, Deno, Hono, Rust, Axum, Python, FastAPI, HTMX
+- GraphQL (federation, BFF, graphql-yoga), REST, gRPC, OpenAPI, event-driven (CDC, CQRS, webhooks), Hasura
 - PostgreSQL (CDC, RDS Proxy, indexing, slow-query optimization), MongoDB
 - CPU / RAM / IO profiling, load testing (k6), hot path isolation
 
 ### Cloud & Infrastructure
 
-- AWS (Lambda, RDS, KMS, VPC, IAM, SNS, S3, Amplify), GCP (Cloud Run), Heroku, Vercel
-- Terraform, Docker, GitLab CI, GitHub Actions, OpenTelemetry
+- AWS (API Gateway, Lambda, ECS, RDS Proxy, RDS, SNS, SQS, CloudWatch, X-Ray, S3), GCP (Cloud Run)
+- Terraform, Docker, GitHub Actions, GitLab CI
+- OpenTelemetry, Grafana, ClickHouse, HyperDX
 - PCI-DSS, GDPR, HL7
 
 ---
