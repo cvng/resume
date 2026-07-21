@@ -54,7 +54,7 @@ Short backend engagements and AI-adoption consulting for startups.
 
 ---
 
-### February 2024 – November 2025 — SysPay – Settleflow
+### February 2024 – November 2025 — SysPay – Settleflow (FinTech)
 
 #### Senior Backend Engineer · Cloud Architect (DevOps)
 
@@ -88,7 +88,7 @@ Designed the event-driven architecture and cloud infrastructure for the payment 
 
 ---
 
-### June 2022 – June 2023 — PrestaShop
+### June 2022 – June 2023 — PrestaShop (E-commerce)
 
 #### Senior Backend Engineer · Tech Lead
 
@@ -118,7 +118,7 @@ Led the "onboarding" squad (5 engineers) and built the SaaS version of PrestaSho
 
 ---
 
-### March 2022 – June 2022 — elba
+### March 2022 – June 2022 — elba (Cybersecurity)
 
 #### Senior Backend Engineer
 
@@ -156,7 +156,7 @@ Embedded in a team of 3 engineers, contributing to internal administration tools
 
 ---
 
-### November 2020 – April 2021 — PromTime
+### November 2020 – April 2021 — PromTime (HealthTech)
 
 #### Senior Backend Engineer
 
@@ -200,7 +200,7 @@ Worked as a developer and tech lead across multiple engagements:
 
 ---
 
-### October 2014 – December 2016 — jestocke.com
+### October 2014 – December 2016 — jestocke.com (Marketplace)
 
 #### Backend Engineer · Tech Lead
 
