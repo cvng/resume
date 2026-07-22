@@ -26,20 +26,21 @@ Paris, France | French | <vangout.cedric@gmail.com> | [Calendly](https://calendl
 
 - Node.js, Bun, Deno, Hono, Rust, Axum, Python, FastAPI, HTMX
 - GraphQL (federation, graphql-yoga), REST, gRPC, OpenAPI, webhooks, Hasura, Supabase
-- PostgreSQL (CDC, RDS Proxy, indexing, slow-query optimization), MongoDB
+- PostgreSQL (CDC, RDS Proxy, indexing, slow-query optimization), MongoDB, Redis
+- Kafka, event streaming, message queues
 - CPU / RAM / IO profiling, load testing (k6), hot path isolation
 
 ### Architecture & Design Patterns
 
-- Clean Code, Hexagonal Architecture (Ports & Adapters), Domain-Driven Design (DDD)
+- Clean Code, TDD, Hexagonal Architecture (Ports & Adapters), Domain-Driven Design (DDD)
 - Event-Driven Architecture, CQRS, Microservices, BFF, ADRs
 
 ### Cloud & Infrastructure
 
 - AWS (API Gateway, Lambda, ECS, RDS Proxy, RDS, SNS, SQS, X-Ray, S3), GCP (Cloud Run)
-- Terraform, Docker, GitHub Actions, GitLab CI
+- Terraform, AWS CDK, Docker, GitHub Actions, GitLab CI
 - OpenTelemetry, Grafana, ClickHouse, HyperDX
-- PCI-DSS, GDPR, HL7
+- PCI-DSS, PSD2, SCA, 3D Secure, GDPR, HL7
 
 ---
 
@@ -76,6 +77,8 @@ Designed the event-driven architecture and cloud infrastructure for the payment 
 - Webhook delivery to partners and billing/analytics metrics fed from the payment event stream
 - Infrastructure built entirely with Terraform modules and PCI-DSS-compliant AWS services (KMS, encrypted RDS, RDS Proxy, segmented VPC, Lambda, security groups, IAM)
 - Stripe-like public API with background reconciliation processing
+- VAMP Ratio (Visa Acquirer Monitoring Program) monitoring to track fraud and dispute ratios against Visa compliance thresholds
+- PSD2 Strong Customer Authentication (SCA) via 3D Secure for EU card payment flows, ensuring regulatory compliance
 - Moved non-critical SQL queries off the hot path into background jobs
 - Continuous PostgreSQL optimization: enabling and resolving slow query logs, monitoring CPU load (cache) and max connections (Lambda concurrency)
 - Built a CI/CD automation CLI (ARGC, Rust) deeply integrated with GitLab CI, deploying each MR to an ephemeral environment with a seeded database in under one minute
@@ -94,7 +97,7 @@ Designed the event-driven architecture and cloud infrastructure for the payment 
 - Reduced SQL queries per application request from 150+ to under 15 through dedicated PostgreSQL indexes
 - Seeded ephemeral environments adopted by all contributors, accelerating iteration and regression review
 
-**Tech stack:** TypeScript, Bun, Hono, OpenAPI, Swagger Codegen, Rust, ARGC, OXC, Squawk, PostgreSQL (CDC, aws_lambda extension, RDS Proxy), AWS (Lambda, encrypted RDS, KMS, VPC, security groups, IAM, SNS), Terraform, Bash, k6, GitLab CI/CD, PCI-DSS, OpenTelemetry
+**Tech stack:** TypeScript, Bun, Hono, OpenAPI, Swagger Codegen, Rust, ARGC, OXC, Squawk, PostgreSQL (CDC, aws_lambda extension, RDS Proxy), AWS (Lambda, encrypted RDS, KMS, VPC, security groups, IAM, SNS), Terraform, AWS CDK, Bash, k6, GitLab CI/CD, PCI-DSS, PSD2, SCA, 3D Secure, OpenTelemetry
 
 ---
 
