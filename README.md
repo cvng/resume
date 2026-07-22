@@ -36,7 +36,7 @@ Paris, France | French | <vangout.cedric@gmail.com> | [Calendly](https://calendl
 
 ### Cloud & Infrastructure
 
-- AWS (API Gateway, Lambda, ECS, RDS Proxy, RDS, SNS, SQS, CloudWatch, X-Ray, S3), GCP (Cloud Run)
+- AWS (API Gateway, Lambda, ECS, RDS Proxy, RDS, SNS, SQS, X-Ray, S3), GCP (Cloud Run)
 - Terraform, Docker, GitHub Actions, GitLab CI
 - OpenTelemetry, Grafana, ClickHouse, HyperDX
 - PCI-DSS, GDPR, HL7
