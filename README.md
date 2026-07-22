@@ -25,9 +25,14 @@ Paris, France | French | <vangout.cedric@gmail.com> | [Calendly](https://calendl
 ### Backend & APIs
 
 - Node.js, Bun, Deno, Hono, Rust, Axum, Python, FastAPI, HTMX
-- GraphQL (federation, BFF, graphql-yoga), REST, gRPC, OpenAPI, event-driven (CDC, CQRS, webhooks), Hasura
+- GraphQL (federation, graphql-yoga), REST, gRPC, OpenAPI, webhooks, Hasura, Supabase
 - PostgreSQL (CDC, RDS Proxy, indexing, slow-query optimization), MongoDB
 - CPU / RAM / IO profiling, load testing (k6), hot path isolation
+
+### Architecture & Design Patterns
+
+- Clean Code, Hexagonal Architecture (Ports & Adapters), Domain-Driven Design (DDD)
+- Event-Driven Architecture, CQRS, Microservices, BFF, ADRs
 
 ### Cloud & Infrastructure
 
@@ -77,6 +82,10 @@ Designed the event-driven architecture and cloud infrastructure for the payment 
 - Git tag-triggered production deployments with automatic CHANGELOG updates (release notes extracted from commits)
 - Pipeline linter integration: OXC (TypeScript) and Squawk (detecting dangerous or slow PostgreSQL migrations in production)
 - Load regression tests (k6) run on every MR and release
+- Enforced clean code standards (SOLID, small reviewable PRs, OXC lint gate) across the team of 5
+- Structured Lambda handlers with a hexagonal (ports & adapters) design, isolating payment domain logic from AWS-specific I/O for testability
+- Modeled the payment domain (transactions, reconciliation, webhooks) as bounded contexts to keep core business logic AWS-agnostic
+- Documented key architecture decisions (event-driven CDC pipeline, Lambda concurrency model) in ADRs
 
 #### Results
 
@@ -105,8 +114,9 @@ Led the "onboarding" squad (5 engineers) and built the SaaS version of PrestaSho
 - Generated a type-safe GraphQL client from the schema, producing typed Vue hooks
 - GitHub Actions pipeline running GraphQL Inspector (graphql-inspector) to detect schema bugs, breaking changes, and regressions, plus tests, then publishing a Docker image to GCP Cloud Run
 - Proposed the initial architecture for onboarding.prestashop.com, jointly with the engineering manager
-- Wrote architecture decision records (ADR) and mentored junior developers in the squad
+- Wrote architecture decision records (ADR), enforced clean code standards via code review, and mentored junior developers in the squad
 - Led architecture meetings with tech leads from other squads to present the target architecture and arbitrate integration points and workflow dependencies
+- Aligned squad boundaries (onboarding, accounts, billing, hosting) with DDD bounded contexts to minimize cross-service coupling in the GraphQL gateway
 - Contributed to PrestaShop's open-source codebase to add generic extension points tailored to our needs
 - Reverse-engineered and contributed (MRs) to other squads' codebases to meet deadlines and shared objectives
 
@@ -137,7 +147,7 @@ Embedded in a team of 5 engineers working directly with the CTO, responsible for
 
 ---
 
-### December 2021 – February 2022 — Theodo FinTech
+### December 2021 – February 2022 — Theodo FinTech (FinTech)
 
 #### Senior Backend Engineer
 
