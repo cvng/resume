@@ -37,7 +37,7 @@ Paris, France | French | <vangout.cedric@gmail.com> | [Calendly](https://calendl
 ### Cloud & Infrastructure
 
 - AWS (API Gateway, Lambda, ECS, RDS Proxy, RDS, SNS, SQS, X-Ray, S3), GCP (Cloud Run)
-- Terraform, Docker, GitHub Actions, GitLab CI
+- Terraform, AWS CDK, Docker, GitHub Actions, GitLab CI
 - OpenTelemetry, Grafana, ClickHouse, HyperDX
 - PCI-DSS, GDPR, HL7
 
@@ -95,7 +95,7 @@ Designed the event-driven architecture and cloud infrastructure for the payment 
 - Reduced SQL queries per application request from 150+ to under 15 through dedicated PostgreSQL indexes
 - Seeded ephemeral environments adopted by all contributors, accelerating iteration and regression review
 
-**Tech stack:** TypeScript, Bun, Hono, OpenAPI, Swagger Codegen, Rust, ARGC, OXC, Squawk, PostgreSQL (CDC, aws_lambda extension, RDS Proxy), AWS (Lambda, encrypted RDS, KMS, VPC, security groups, IAM, SNS), Terraform, Bash, k6, GitLab CI/CD, PCI-DSS, OpenTelemetry
+**Tech stack:** TypeScript, Bun, Hono, OpenAPI, Swagger Codegen, Rust, ARGC, OXC, Squawk, PostgreSQL (CDC, aws_lambda extension, RDS Proxy), AWS (Lambda, encrypted RDS, KMS, VPC, security groups, IAM, SNS), Terraform, AWS CDK, Bash, k6, GitLab CI/CD, PCI-DSS, OpenTelemetry
 
 ---
 
