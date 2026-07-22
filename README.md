@@ -1,4 +1,4 @@
-# Cedric VANGOUT
+# Cedric Vangout
 
 **Senior Backend Engineer**
 specialized in high-throughput payment systems, event-driven architectures, and GraphQL APIs. 12+ years of experience across fintech, e-commerce, and SaaS.
