@@ -76,6 +76,7 @@ Designed the event-driven architecture and cloud infrastructure for the payment 
 - Webhook delivery to partners and billing/analytics metrics fed from the payment event stream
 - Infrastructure built entirely with Terraform modules and PCI-DSS-compliant AWS services (KMS, encrypted RDS, RDS Proxy, segmented VPC, Lambda, security groups, IAM)
 - Stripe-like public API with background reconciliation processing
+- VAMP Ratio (Visa Acquirer Monitoring Program) monitoring to track fraud and dispute ratios against Visa compliance thresholds
 - Moved non-critical SQL queries off the hot path into background jobs
 - Continuous PostgreSQL optimization: enabling and resolving slow query logs, monitoring CPU load (cache) and max connections (Lambda concurrency)
 - Built a CI/CD automation CLI (ARGC, Rust) deeply integrated with GitLab CI, deploying each MR to an ephemeral environment with a seeded database in under one minute
